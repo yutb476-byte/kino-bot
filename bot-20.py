@@ -5,7 +5,7 @@ reklama, kino boshqaruvi, VIP, ID qidirish.
 
 Ishga tushirish:
     pip install -r requirements.txt
-    BOT_TOKEN=123:ABC OWNER_ID=123456789 python bot.py
+    BOT_TOKEN=8800028477:AAEhBMJuFggPcjKrkS5TFIEq3ybF8YdbCoQ:ABC OWNER_ID=7883264888 python bot.py
 """
 import asyncio
 import html
@@ -302,7 +302,7 @@ def stat_line(key: str, real: int) -> str:
     r = q("SELECT val FROM stat_adj WHERE key=?", (key,), one=True)
     a = r["val"] if r else 0
     if a:
-        return f"{STAT_NAMES[key]}: <b>{real + a}</b> (haqiqiy {real}, qo'lda {a:+d})"
+        return f"{STAT_NAMES[key]}: <b>{real + a}</b> (instagramdan {real}, telegramdan {a:+d})"
     return f"{STAT_NAMES[key]}: <b>{real}</b>"
 
 
